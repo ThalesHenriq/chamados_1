@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Chamados</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Criação de Chamados</h1>
+        <form id="ticketForm">
+            <label for="title">Título do Chamado:</label>
+            <input type="text" id="title" name="title" placeholder="Descreva o problema..." required>
+
+            <label for="category">Categoria:</label>
+            <select id="category" name="category" required>
+                <option value="">Selecione uma categoria</option>
+                <option value="suporte">Suporte Técnico</option>
+                <option value="infra">Infraestrutura</option>
+                <option value="sistema">Erro no Sistema</option>
+                <option value="outro">Outro</option>
+            </select>
+
+            <label for="description">Descrição:</label>
+            <textarea id="description" name="description" placeholder="Detalhe o problema..." rows="5" required></textarea>
+
+            <label for="priority">Prioridade:</label>
+            <select id="priority" name="priority" required>
+                <option value="">Selecione a prioridade</option>
+                <option value="baixa">Baixa</option>
+                <option value="media">Média</option>
+                <option value="alta">Alta</option>
+            </select>
+
+            <button type="submit">Criar Chamado</button>
+        </form>
+        <div id="ticketList">
+            <h2>Lista de Chamados</h2>
+            <ul id="tickets"></ul>
+        </div>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
